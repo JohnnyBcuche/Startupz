@@ -1,0 +1,151 @@
+@use '../abstracts' as *;
+
+// Defaults
+@font-face {
+  font-family: "Circular Std";
+  src: url("../../assets/font/circular-std-medium-500.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  font-family: "Circular Std";
+}
+
+p {
+  @include font-prop($fn-24, $fn-w-400, $orange-primary);
+}
+
+h1 {
+  @include font-prop($fn-85, $fn-w-700, $blue-orion);
+  font-family: "Circular Std";
+  @media (max-width: 959px) {
+    font-size: $fn-40;
+  }
+}
+
+h2 {
+  @include font-prop($fn-50, $fn-w-700, $blue-orion);
+  font-family: "Circular Std";
+  @media (max-width: 959px) {
+    font-size: $fn-40;
+  }
+}
+
+h3 {
+  @include font-prop($fn-40, $fn-w-700, $orange-primary);
+  font-family: "Circular Std";
+  @media (max-width: 959px) {
+    font-size: $fn-24;
+  }
+}
+
+// Buttons
+.btn {
+  padding: 5px 20px;
+  border-radius: 33px;
+  font-size: $fn-18;
+  font-weight: $fn-w-700;
+  text-transform: none;
+}
+@mixin button($color-1, $color-2, $color-3) {
+  @extend .btn;
+  background: $color-1;
+  color: $color-2;
+  border: 1px solid $color-3;
+  &:hover {
+    background: $color-2;
+    color: $color-1;
+    transition: all 0.3s ease;
+  }
+}
+
+.btn-green {
+  @include button($green-complementary, $white, $green-complementary);
+}
+.btn-green-inverse {
+  @include button($white, $green-complementary, $green-complementary);
+}
+.btn-gray {
+  @include button($blue-orion, $white, $blue-orion);
+}
+
+// Custom classes
+.section-2-box {
+  span {
+    @include font-prop($fn-30, $fn-w-700, $orange-primary);
+    padding: 0 20px 20px 0;
+    border-bottom: 1px solid $blue-orion;
+  }
+  p {
+    @include font-prop($fn-30, $fn-w-400, $blue-orion);
+    margin-top: 30px;
+    @media (max-width: 959px) {
+      font-size: $fn-24;
+    }
+  }
+}
+
+.section-5-box {
+  border-radius: 30px;
+  span {
+    font-size: $fn-32;
+    font-weight: $fn-w-700;
+  }
+  p {
+    @include font-prop($fn-16, $fn-w-400, $blue-orion);
+    margin-top: 20px;
+  }
+}
+
+.section-8 {
+  h2 {
+    @include font-prop($fn-60, $fn-w-700, $white);
+    @media (max-width: 959px) {
+      font-size: $fn-40;
+    }
+  }
+  p {
+    @include font-prop($fn-24, $fn-w-500, $white);
+  }
+}
+
+.virtual-assist-position {
+  padding: 20px;
+  @media (min-width: 960px) {
+    position: absolute;
+    bottom: 20px;
+    right: 100px;
+  }
+}
+
+.virtual-assist-cloud {
+  p {
+    @include font-prop($fn-14, $fn-w-500, $white);
+    padding: 10px 20px;
+    background: $green-complementary;
+    border-radius: 30px 30px 0;
+  }
+}
+
+.footer {
+  span {
+    @include font-prop($fn-18, $fn-w-400, $blue-orion);
+  }
+  p {
+    @include font-prop($fn-18, $fn-w-400, $gray-nickel);
+  }
+  a {
+    @include font-prop($fn-18, $fn-w-400, $green-complementary);
+    text-decoration: none;
+  }
+}
+
+.border-10 {
+  border-radius: 10px;
+}
+
+.remove-border {
+  border: none !important;
+}

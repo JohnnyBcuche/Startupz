@@ -1,0 +1,12 @@
+@use '../abstracts' as *;
+
+// Font weight
+.fn-w-400 {
+  font-weight: $fn-w-400;
+}
+.fn-w-500 {
+  font-weight: $fn-w-500;
+}
+.fn-w-700 {
+  font-weight: $fn-w-700;
+}

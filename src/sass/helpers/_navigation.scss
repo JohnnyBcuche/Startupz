@@ -1,0 +1,41 @@
+@use '../abstracts' as *;
+
+.uk-navbar-container:not(.uk-navbar-transparent) {
+  background-color: $white-cascading;
+  border-bottom: 1px solid $blue-orion;
+}
+
+.navbar-inactive {
+  background-color: $white;
+}
+
+.uk-navbar-nav li a {
+  @include font-prop($fn-18, $fn-w-400, $blue-orion);
+  text-transform: capitalize;
+  &:hover {
+    color: $orange-primary;
+  }
+}
+
+.uk-offcanvas-bar {
+  background-color: $white-cascading;
+  border-right: 1px solid $blue-orion;
+}
+
+.uk-offcanvas-bar .uk-nav-default li a {
+  font-size: $fn-18;
+  color: $blue-orion;
+  &:hover {
+    color: $orange-primary;
+  }
+}
+
+.uk-offcanvas-bar .uk-nav-default button {
+  font-size: $fn-16;
+  padding: 2px 10px;
+  margin-top: 10px;
+}
+
+.uk-offcanvas-close svg {
+  color: $blue-orion;
+}

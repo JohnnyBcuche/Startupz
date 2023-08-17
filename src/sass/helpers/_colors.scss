@@ -1,0 +1,44 @@
+@use '../abstracts' as *;
+
+// Text colors
+.text-primary {
+  color: $blue-orion;
+}
+.text-orange {
+  color: $orange-primary;
+}
+.text-white {
+  color: $white;
+}
+.text-gray {
+  color: $gray-nickel;
+}
+.text-green-olive {
+  color: $green-olive;
+}
+.text-green-complementary {
+  color: $green-complementary;
+}
+.text-blue-batch {
+  color: $blue-batch;
+}
+.text-blue-january {
+  color: $blue-january;
+}
+.text-purple {
+  color: $purple-lavender;
+}
+
+// Background colors
+.background-white {
+  background-color: $white;
+}
+.background-white-smoke {
+  background-color: $white-smoke;
+}
+.background-white-cascading {
+  background-color: $white-cascading;
+}
+.background-orange {
+  background-color: $orange-secondary;
+}
